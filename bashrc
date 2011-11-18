@@ -18,6 +18,9 @@ export CLICOLOR=1
 
 export HISTCONTROL="ignoredups"
 
+export EDITOR=vim
+which mate >/dev/null && export EDITOR=mate
+
 alias ..="cd .."
 alias ...="cd ..."
 alias ll="ls -al"
