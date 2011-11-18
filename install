@@ -17,4 +17,10 @@ for i in $FILES; do
   fi
 done
 
+if [ ! -e ~/.bashrc_local ]; then
+  echo -e "\n=== WARNING: '~/.bashrc_local' not found."
+  echo "You may want to copy the template file (don't forget customizing it!):"
+  echo "Use this command: cp ~/dotfiles/bashrc_local.dist ~/.bashrc_local"
+fi
+
 echo -e "\n=== Installation completed! You may want to run 'source ~/.bashrc' now."
