@@ -1,3 +1,6 @@
+# do nothing if not running interactively
+[ -z "$PS1" ] && return
+
 which -s rbenv && eval "$(rbenv init -)"
 
 # enable colored output from ls
