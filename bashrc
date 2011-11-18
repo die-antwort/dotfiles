@@ -11,7 +11,7 @@ function da_ssh () {
   $cmd
 }
 
-which -s rbenv && eval "$(rbenv init -)"
+which rbenv >/dev/null && eval "$(rbenv init -)"
 
 # enable colored output from ls
 export CLICOLOR=1
