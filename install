@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILES="bash_profile"
+FILES="bash_profile bashrc"
 
 cd 
 
@@ -17,4 +17,4 @@ for i in $FILES; do
   fi
 done
 
-echo -e "\n=== Installation completed! You may want to run 'source ~/.bash_profile' now."
+echo -e "\n=== Installation completed! You may want to run 'source ~/.bashrc' now."
