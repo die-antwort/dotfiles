@@ -1,0 +1,20 @@
+#!/bin/bash
+
+FILES="bash_profile"
+
+cd 
+
+echo "=== Removing existing symlinks in ~"
+find . -depth 1 -prune -type l -lname 'dotfiles/*' -ls -exec rm {} +
+
+echo -e "\n=== Creating new symlinks in ~"
+for i in $FILES; do
+  dotfile=".$i"
+  if [ -e $dotfile ]; then
+    echo "ERROR: '$dotfile' already exists. Remove it manually, then run install again."
+  else
+    ln -vs dotfiles/$i $dotfile
+  fi
+done
+
+echo -e "\n=== Installation completed! You may want to run 'source ~/.bash_profile' now."
