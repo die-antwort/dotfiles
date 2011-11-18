@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILES="bash_profile bashrc"
+FILES="bash_profile bashrc gitconfig"
 
 cd 
 

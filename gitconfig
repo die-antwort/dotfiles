@@ -1,0 +1,12 @@
+[alias]
+  ci = commit
+  df = diff
+  dfc = diff --cached
+  st = status
+  last = cat-file commit HEAD
+  
+[color]
+  ui = auto
+  
+[format]
+	pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
