@@ -13,3 +13,6 @@ alias ...="cd ..."
 alias ll="ls -al"
 alias be="bundle exec"
 alias r="ruby"
+
+# system specific settings can be set in .bashrc_local
+[ -e ~/.bashrc_local ] && source ~/.bashrc_local
