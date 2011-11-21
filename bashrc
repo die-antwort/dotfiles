@@ -45,6 +45,7 @@ alias r="ruby"
 alias da3="da_ssh da3.die-antwort.eu"
 alias da4="da_ssh da4.die-antwort.eu"
 alias dabuero="da_ssh buero.die-antwort.eu"
+alias reload="source ~/.bashrc"
 
 # system specific settings can be set in .bashrc_local
 [ -e ~/.bashrc_local ] && source ~/.bashrc_local
