@@ -27,6 +27,14 @@ function da_ssh () {
   $cmd
 }
 
+function project_directory () {
+  local dir=$(pwd)
+  if [[ $dir == ~/Projekte/*/* ]]; then
+    dir=$( echo ${dir#$HOME/Projekte/} | cut -f 1 -d "/" )
+    echo -e "(\033[0;36m$dir\033[0m) "
+  fi
+}
+
 which rbenv >/dev/null && eval "$(rbenv init -)"
 
 # enable colored output from ls
@@ -38,6 +46,7 @@ export LESS=-R
 export HISTCONTROL="ignoredups"
 
 export EDITOR=vim
+export PS1="\$(project_directory)\[\033[1;33m\]\W\[\033[1;35m\] $ \[\033[0m\]"
 which mate >/dev/null && export EDITOR=mate
 
 alias ..="cd .."
