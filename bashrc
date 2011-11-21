@@ -28,6 +28,9 @@ which rbenv >/dev/null && eval "$(rbenv init -)"
 # enable colored output from ls
 export CLICOLOR=1
 
+# enable ansi colors in less
+export LESS=-R 
+
 export HISTCONTROL="ignoredups"
 
 export EDITOR=vim
