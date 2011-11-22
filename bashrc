@@ -21,7 +21,11 @@ LightCyan='\033[1;36m'
 White='\033[1;37m'
 
 function p () {
-  cd "$HOME/Projekte/P$*"
+  if [[ -d "$HOME/Projekte/P$*" ]]; then
+    cd "$HOME/Projekte/P$*"
+  else
+    cd "$HOME/Projekte/$*"
+  fi
 }
 
 function _p () {
