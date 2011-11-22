@@ -1,15 +1,24 @@
 # do nothing if not running interactively
 [ -z "$PS1" ] && return
 
-function color () {
-  case "$1" in
-    "light-red")  echo -e "\033[1;31m";;
-    "yellow")     echo -e "\033[1;33m";;
-    "magenta")    echo -e "\033[1;35m";;
-    "light-cyan") echo -e "\033[1;36m";;
-    "none")       echo -e "\033[0m";;
-  esac
-}
+# Colors
+NoColor='\033[0m'
+Black='\033[0;30m'
+Red='\033[0;31m'
+Green='\033[0;32m'
+Yellow='\033[0;33m'
+Blue='\033[0;34m'
+Magenta='\033[0;35m'
+Cyan='\033[0;36m'
+LightGray='\033[0;37m'
+DarkGray='\033[1;30m'
+LightRed='\033[1;31m'
+LightGreen='\033[1;32m'
+LightYellow='\033[1;33m'
+LightBlue='\033[1;34m'
+LightMagenta='\033[1;35m'
+LightCyan='\033[1;36m'
+White='\033[1;37m'
 
 function p () {
   cd "$HOME/Projekte/P$*"

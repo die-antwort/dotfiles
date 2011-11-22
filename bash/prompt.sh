@@ -1,20 +1,22 @@
-function _project_directory () {
+function _set_project_and_dir_in_project () {
   local dir=$(pwd)
   if [[ $dir == ~/Projekte/* ]]; then
-    local project=$( echo ${dir#$HOME/Projekte/} | cut -f 1 -d "/" )
-    dir=${dir#$HOME/Projekte/$project}
-    [[ -z "$dir" ]] && dir="/"
-    echo "$(color light-cyan)${project}$(color yellow) ${dir}$(color none)"
+    Project=$( echo ${dir#$HOME/Projekte/} | cut -f 1 -d "/" )
+    DirInProject=${dir#$HOME/Projekte/$Project}
+    [[ -z "$DirInProject" ]] && DirInProject="/"
+    DirInProject=" $DirInProject"
   else
-    dir=${dir/#$HOME/\~}
-    echo "$(color yellow)${dir}$(color none)"
+    Project=""
+    DirInProject=${dir/#$HOME/\~}
   fi
 }
 
+PROMPT_COMMAND=_set_project_and_dir_in_project
+
 if [[ -z "$SSH_CONNECTION" ]]; then
-  PS1="\$(_project_directory)"
+  PS1="\[${LightCyan}\]\$Project\[${LightYellow}\]\$DirInProject"
 else
-  PS1="$(color light-red)\\u$(color yellow)@$(color light-cyan)\\h$(color none) $(color yellow)\\w$(color none)"
+  PS1="\[$LightRed\]\\u\[$LightYellow\]@\[$LightCyan\]\\h \[$LightYellow\]\\w"
 fi
 
-export PS1="${PS1}$(color magenta) $ $(color none)"
+PS1="${PS1}\[$LightMagenta\] $ \[$NoColor\]"
