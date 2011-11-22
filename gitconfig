@@ -7,6 +7,9 @@
   
 [color]
   ui = auto
+
+[core]  
+  excludesfile = ~/dotfiles/gitignore
   
 [format]
 	pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
