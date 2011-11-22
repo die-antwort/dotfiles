@@ -50,7 +50,7 @@ export LESS=-R
 export HISTCONTROL="ignoredups"
 
 export EDITOR=vim
-which mate >/dev/null && export EDITOR=mate
+which mate >/dev/null && export EDITOR="mate -w"
 
 alias ..="cd .."
 alias ...="cd ..."
