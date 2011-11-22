@@ -1,4 +1,4 @@
-function project_directory () {
+function _project_directory () {
   local dir=$(pwd)
   if [[ $dir == ~/Projekte/* ]]; then
     local project=$( echo ${dir#$HOME/Projekte/} | cut -f 1 -d "/" )
@@ -11,12 +11,10 @@ function project_directory () {
   fi
 }
 
-function prompt () {
-  if [[ -z "$SSH_CONNECTION" ]]; then
-    echo "\$(project_directory)"
-  else
-    echo "$(color light-red)\\u$(color yellow)@$(color light-cyan)\\h$(color none) $(color yellow)\\w$(color none)"
-  fi
-}
+if [[ -z "$SSH_CONNECTION" ]]; then
+  PS1="\$(_project_directory)"
+else
+  PS1="$(color light-red)\\u$(color yellow)@$(color light-cyan)\\h$(color none) $(color yellow)\\w$(color none)"
+fi
 
-export PS1="$(prompt)$(color magenta) $ $(color none)"
+export PS1="${PS1}$(color magenta) $ $(color none)"
