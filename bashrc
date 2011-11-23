@@ -72,6 +72,7 @@ alias be="bundle exec"
 alias r="ruby"
 alias da3="da_ssh da3.die-antwort.eu"
 alias da4="da_ssh da4.die-antwort.eu"
+alias buero="da_ssh buero.die-antwort.eu"
 alias dabuero="da_ssh buero.die-antwort.eu"
 alias reload="source ~/.bashrc"
 
