@@ -11,7 +11,7 @@ function _set_project_and_dir_in_project () {
   fi
 }
 
-PROMPT_COMMAND=_set_project_and_dir_in_project
+PROMPT_COMMAND="_set_project_and_dir_in_project; $PROMPT_COMMAND"
 
 if [[ -z "$SSH_CONNECTION" ]]; then
   PS1="\[${LightCyan}\]\$Project\[${LightYellow}\]\$DirInProject"
