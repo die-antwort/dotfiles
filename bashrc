@@ -54,8 +54,12 @@ source ~/dotfiles/bash/prompt.sh
 
 which rbenv >/dev/null && eval "$(rbenv init -)"
 
-# enable colored output from ls
-export CLICOLOR=1
+# enable colored output from ls on Mac OS (CLICOLOR) and Linux (alias)
+if [[ $(uname) == "darwin" ]]; then
+  export CLICOLOR=1
+else
+  alias ls="ls --color=auto"
+fi
 
 # enable ansi colors in less
 export LESS=-R 
