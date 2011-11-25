@@ -1,7 +1,7 @@
 [alias]
   ci = commit
-  df = diff
-  dfc = diff --cached
+  co = checkout
+  diffc = diff --cached
   st = status
   last = cat-file commit HEAD
   
