@@ -55,7 +55,7 @@ source ~/dotfiles/bash/prompt.sh
 which rbenv >/dev/null && eval "$(rbenv init -)"
 
 # enable colored output from ls on Mac OS (CLICOLOR) and Linux (alias)
-if [[ $(uname) == "darwin" ]]; then
+if [[ $(uname) == "Darwin" ]]; then
   export CLICOLOR=1
 else
   alias ls="ls --color=auto"
