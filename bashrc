@@ -40,14 +40,17 @@ function _p () {
 
 complete -F _p p
 
+function do_with_echo () {
+  echo "$*"
+  $*
+}
+
 function da_ssh () {
   if [ -z "$DA_USERNAME" ]; then
     echo "ERROR: Environment variable DA_USERNAME not set (use ~/.bashrc_local for setting it)."
     return
   fi
-  cmd="ssh $DA_USERNAME@$*"
-  echo $cmd
-  $cmd
+  do_with_echo ssh $DA_USERNAME@$*
 }
 
 source ~/dotfiles/bash/prompt.sh
@@ -73,7 +76,7 @@ alias ..="cd .."
 alias ...="cd ..."
 alias ll="ls -al"
 alias be="bundle exec"
-alias ttr="touch tmp/restart.txt"
+alias ttr="do_with_echo touch tmp/restart.txt"
 alias r="ruby"
 alias da3="da_ssh da3.die-antwort.eu"
 alias da4="da_ssh da4.die-antwort.eu"
