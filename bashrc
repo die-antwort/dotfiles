@@ -92,7 +92,7 @@ alias dabuero="da_ssh buero.die-antwort.eu"
 alias reload="source ~/.bashrc"
 
 if [[ -n "$RMATE_REMOTE_PORT" && -n "$SSH_CONNECTION" ]]; then
-  alias rmate="rmate -p $RMATE_REMOTE_PORT"
+  export RMATE_PORT=$RMATE_REMOTE_PORT
 fi
   
 # system specific settings can be set in .bashrc_local
