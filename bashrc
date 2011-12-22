@@ -46,15 +46,16 @@ function do_with_echo () {
 }
 
 function da_ssh () {
+  local args
   if [ -z "$DA_USERNAME" ]; then
     echo "ERROR: Environment variable DA_USERNAME not set (use ~/.bashrc_local for setting it)."
     return
   fi
-  if [[ $(uname) == "Darwin" ]]; then
+  if [[ "$RMATE_REMOTE_PORT" != "" ]]; then
     # set up port forwarding for rmate (TextMate 2)
-    ARGS="-R 52698:localhost:52698"
+    args="-R $RMATE_REMOTE_PORT:localhost:52698 -o SendEnv=RMATE_REMOTE_PORT"
   fi
-  do_with_echo ssh $ARGS $DA_USERNAME@$*
+  do_with_echo ssh $args $DA_USERNAME@$*
 }
 
 source ~/dotfiles/bash/prompt.sh
@@ -90,5 +91,9 @@ alias buero="da_ssh buero.die-antwort.eu"
 alias dabuero="da_ssh buero.die-antwort.eu"
 alias reload="source ~/.bashrc"
 
+if [[ -n "$RMATE_REMOTE_PORT" && -n "$SSH_CONNECTION" ]]; then
+  alias rmate="rmate -p $RMATE_REMOTE_PORT"
+fi
+  
 # system specific settings can be set in .bashrc_local
 [ -e ~/.bashrc_local ] && source ~/.bashrc_local

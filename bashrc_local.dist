@@ -3,6 +3,11 @@ export DA_USERNAME=""
 export GIT_AUTHOR_EMAIL=""
 export GIT_AUTHOR_NAME=""
 
+# If this is a computer with TextMate 2 installed: Select a unique remote port
+# for tunneling rmate connections over ssh (unique among all our computers).
+# Use 52698 (default) plus an unique offset.
+#export RMATE_REMOTE_PORT=52698
+
 # Change this only if you really want to use different GIT_COMMITTER info:
 export GIT_COMMITTER_EMAIL=$GIT_AUTHOR_EMAIL
 export GIT_COMMITTER_NAME=$GIT_AUTHOR_NAME
