@@ -50,7 +50,11 @@ function da_ssh () {
     echo "ERROR: Environment variable DA_USERNAME not set (use ~/.bashrc_local for setting it)."
     return
   fi
-  do_with_echo ssh $DA_USERNAME@$*
+  if [[ $(uname) == "Darwin" ]]; then
+    # set up port forwarding for rmate (TextMate 2)
+    ARGS="-R 52698:localhost:52698"
+  fi
+  do_with_echo ssh $ARGS $DA_USERNAME@$*
 }
 
 source ~/dotfiles/bash/prompt.sh
