@@ -22,7 +22,7 @@ if [[ -z "$SSH_CONNECTION" ]]; then
   WINDOW_TITLE=$(printf '\e]0;\a')
   PS1="\[${LightCyan}\]\$Project\[${LightYellow}\]\$DirInProject"
 else
-  WINDOW_TITLE=$(printf '\e]7;\a\e]0;%s\a' "\\u@\\h")
+  WINDOW_TITLE=$(printf '\e]7;\a\e]0;%s\a' "SSH: \\u@\\h")
   PS1="\[$LightRed\]\\u\[$LightYellow\]@\[$LightCyan\]\\h \[$LightYellow\]\\w"
 fi
 
