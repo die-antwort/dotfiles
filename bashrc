@@ -57,6 +57,8 @@ source ~/dotfiles/bash/prompt.sh
 
 which rbenv >/dev/null && eval "$(rbenv init -)"
 
+export PATH="~/dotfiles/bin:$PATH"
+
 # enable colored output from ls on Mac OS (CLICOLOR) and Linux (alias)
 if [[ $(uname) == "Darwin" ]]; then
   export CLICOLOR=1
