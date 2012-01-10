@@ -80,7 +80,7 @@ export EDITOR=vim
 which mate >/dev/null && export EDITOR="mate -w"
 
 alias ..="cd .."
-alias ...="cd ..."
+alias ...="cd ../.."
 alias ll="ls -al"
 alias be="bundle exec"
 alias ttr="do_with_echo touch tmp/restart.txt"
