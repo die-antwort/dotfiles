@@ -79,6 +79,9 @@ export HISTCONTROL="ignoredups"
 export EDITOR=vim
 which mate >/dev/null && export EDITOR="mate -w"
 
+# make it possible to use aliases with sudo (see https://wiki.archlinux.org/index.php/Sudo#Passing_aliases)
+alias sudo="sudo "
+
 alias ..="cd .."
 alias ...="cd ../.."
 alias ll="ls -al"
