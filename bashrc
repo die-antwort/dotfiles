@@ -40,11 +40,6 @@ function _p () {
 
 complete -F _p p
 
-function do_with_echo () {
-  echo "$*"
-  $*
-}
-
 function da_ssh () {
   local args
   if [ -z "$DA_USERNAME" ]; then
@@ -86,9 +81,9 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ll="ls -al"
 alias be="bundle exec"
-alias ttr="do_with_echo touch tmp/restart.txt"
-which apachectl >/dev/null && alias agr="do_with_echo apachectl graceful"
-which apache2ctl >/dev/null && alias agr="do_with_echo apache2ctl graceful"
+alias ttr="touch tmp/restart.txt"
+which apachectl >/dev/null && alias agr="apachectl graceful"
+which apache2ctl >/dev/null && alias agr="apache2ctl graceful"
 alias r="ruby"
 alias da3="da_ssh da3.die-antwort.eu"
 alias da4="da_ssh da4.die-antwort.eu"
