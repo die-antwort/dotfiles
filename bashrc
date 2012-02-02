@@ -50,7 +50,7 @@ function da_ssh () {
     # set up port forwarding for rmate (TextMate 2)
     args="-R $RMATE_REMOTE_PORT:localhost:52698 -o SendEnv=RMATE_REMOTE_PORT"
   fi
-  do_with_echo ssh $args $DA_USERNAME@$*
+  ssh $args $DA_USERNAME@$*
 }
 
 source ~/dotfiles/bash/prompt.sh
