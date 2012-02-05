@@ -1,9 +1,17 @@
 [alias]
+  alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1 = \\2/' | sort
   ci = commit
+  cia = commit --amend
   co = checkout
   diffc = diff --cached
+  logd = log --format=medium -p
+  logm = log --format=medium
+  logg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  pullr = pull --rebase
+  rb = rebase
+  rbc = rebase --continue
+  rmd = !git ls-files -z --deleted | xargs -0 git rm
   st = status
-  last = cat-file commit HEAD
   
 [color]
   ui = auto
