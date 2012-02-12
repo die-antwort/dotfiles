@@ -4,9 +4,11 @@
   cia = commit --amend
   co = checkout
   diffc = diff --cached
-  logd = log --format=medium -p
-  logm = log --format=medium
-  logg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  diffw = diff --word-diff=color
+  diffcw = diff --cached --word-diff=color
+  logd = log --format=medium -p --word-diff=color
+  logl = log --format=medium --decorate
+  logg = log --graph
   pullr = pull --rebase
   rb = rebase
   rbc = rebase --continue
@@ -19,5 +21,8 @@
 [core]  
   excludesfile = ~/dotfiles/gitignore
   
+[diff]
+  renames = true
+  
 [format]
-	pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
+	pretty = %C(yellow)%h%C(magenta bold)%d%Creset %s %C(blue)<%an> %C(green)(%cr)%Creset
