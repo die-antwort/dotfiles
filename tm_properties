@@ -1,0 +1,6 @@
+tabSize = 2
+softTabs = true
+
+exclude = "{$exclude,*.scssc}"
+excludeInFileChooser = "{$exclude,*.gif,*.png,*.jpg}"
+excludeInFolderSearch = "{$exclude,tmp,log}"
