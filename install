@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILES="ackrc bash_profile bashrc gitconfig irbrc tm_properties"
+FILES="ackrc bash_profile bashrc gitconfig irbrc jshintrc tm_properties"
 
 cd 
 
