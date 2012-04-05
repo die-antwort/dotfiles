@@ -9,6 +9,7 @@
   logd = log --format=medium -p --word-diff=color
   logl = log --format=medium --decorate
   logg = log --graph
+  logb = log --graph --branches
   pullr = pull --rebase
   rb = rebase
   rbc = rebase --continue
