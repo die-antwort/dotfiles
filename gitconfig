@@ -5,8 +5,7 @@
   co = checkout
   diffc = diff --cached
   diffw = diff --word-diff=color
-  diffcw = diff --cached --word-diff=color
-  logd = log --format=medium -p --word-diff=color
+  logd = log --format=medium -p
   logl = log --format=medium --decorate
   logg = log --graph
   logb = log --graph --branches
