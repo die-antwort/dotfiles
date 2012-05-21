@@ -25,4 +25,4 @@
   renames = true
   
 [format]
-	pretty = %C(yellow)%h%C(magenta bold)%d%Creset %s %C(blue)<%an> %C(green)(%cr)%Creset
+	pretty = %C(yellow)%h%C(magenta bold)%d%Creset %s %C(blue)<%an> %C(green)(%ar)%Creset
