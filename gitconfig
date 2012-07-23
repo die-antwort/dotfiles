@@ -26,3 +26,6 @@
   
 [format]
 	pretty = %C(yellow)%h%C(magenta bold)%d%Creset %s %C(blue)<%an> %C(green)(%ar)%Creset
+
+[url "ssh://git@git.die-antwort.eu/var/git/"]
+  insteadOf = da:
