@@ -55,9 +55,12 @@ function da_ssh () {
 
 source ~/dotfiles/bash/prompt.sh
 
-which rbenv >/dev/null && eval "$(rbenv init -)"
+if [[ ":$PATH:" != *":/usr/local/bin:"* ]]; then
+  PATH="/usr/local/bin:$PATH"
+fi
+PATH="$HOME/dotfiles/bin:$PATH"
 
-export PATH="$HOME/dotfiles/bin:$PATH"
+which rbenv >/dev/null && eval "$(rbenv init -)"
 
 # enable colored output from ls on Mac OS (CLICOLOR) and Linux (alias)
 if [[ $(uname) == "Darwin" ]]; then
