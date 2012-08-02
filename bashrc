@@ -53,6 +53,7 @@ function da_ssh () {
   ssh $args $DA_USERNAME@$*
 }
 
+source ~/dotfiles/bash/git-completion.sh
 source ~/dotfiles/bash/prompt.sh
 
 if [[ ":$PATH:" != *":/usr/local/bin:"* ]]; then
