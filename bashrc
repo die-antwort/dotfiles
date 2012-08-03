@@ -53,6 +53,7 @@ function da_ssh () {
   ssh $args $DA_USERNAME@$*
 }
 
+set +o histexpand
 source ~/dotfiles/bash/git-completion.sh
 source ~/dotfiles/bash/prompt.sh
 
