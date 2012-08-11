@@ -29,3 +29,5 @@
 
 [url "ssh://git@git.die-antwort.eu/var/git/"]
   insteadOf = da:
+[merge]
+	conflictstyle = diff3
