@@ -4,3 +4,5 @@ softTabs = true
 exclude = "{$exclude,*.scssc}"
 excludeInFileChooser = "{$exclude,*.gif,*.png,*.jpg,tmp}"
 excludeInFolderSearch = "{$exclude,tmp,log}"
+
+TM_PHP_OPEN_TAG = ""
