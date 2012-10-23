@@ -9,6 +9,7 @@
   logl = log --format=medium --decorate
   logg = log --graph
   logb = log --graph --branches
+  loga = log --graph --all
   pullr = pull --rebase
   rb = rebase
   rbc = rebase --continue
