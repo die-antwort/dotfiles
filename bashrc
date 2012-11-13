@@ -57,10 +57,7 @@ set +o histexpand
 source ~/dotfiles/bash/git-completion.sh
 source ~/dotfiles/bash/prompt.sh
 
-if [[ ":$PATH:" != *":/usr/local/bin:"* ]]; then
-  PATH="/usr/local/bin:$PATH"
-fi
-PATH="$HOME/dotfiles/bin:$PATH"
+PATH="$HOME/dotfiles/bin:/usr/local/bin:$PATH"
 
 which rbenv >/dev/null && eval "$(rbenv init -)"
 
