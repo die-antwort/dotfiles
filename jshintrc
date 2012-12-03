@@ -1,4 +1,10 @@
 {
   "lastsemic": true,
-  "evil": true
+  "evil": true,
+  
+  // Environments
+  "browser": true,
+  "devel": true,
+  "jquery": true,
+  
 }
