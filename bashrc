@@ -58,6 +58,7 @@ source ~/dotfiles/bash/git-completion.sh
 source ~/dotfiles/bash/prompt.sh
 
 PATH="$HOME/dotfiles/bin:/usr/local/bin:$PATH"
+PATH="/usr/local/share/npm/bin:$PATH"
 
 which rbenv >/dev/null && eval "$(rbenv init -)"
 
