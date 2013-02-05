@@ -57,8 +57,10 @@ set +o histexpand
 source ~/dotfiles/bash/git-completion.sh
 source ~/dotfiles/bash/prompt.sh
 
+if [[ -e /usr/local/share/npm/bin ]]; then
+  PATH="/usr/local/share/npm/bin:$PATH"
+fi
 PATH="$HOME/dotfiles/bin:/usr/local/bin:$PATH"
-PATH="/usr/local/share/npm/bin:$PATH"
 
 which rbenv >/dev/null && eval "$(rbenv init -)"
 
