@@ -32,3 +32,5 @@
   insteadOf = da:
 [merge]
 	conflictstyle = diff3
+[rerere]
+	enabled = true
