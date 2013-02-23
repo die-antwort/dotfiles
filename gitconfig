@@ -34,3 +34,5 @@
 	conflictstyle = diff3
 [rerere]
 	enabled = true
+[push]
+	default = tracking
