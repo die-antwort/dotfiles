@@ -53,14 +53,23 @@ function da_ssh () {
   ssh $args $DA_USERNAME@$*
 }
 
+function add_to_path_if_exist () {
+  # loop over arguments in reverse order to make sure $PATH contains the arguments in the 
+  # same order as given to the function
+  for ((i=$#; i>0; i--)); do 
+    local dir=${!i}
+    if [[ -e $dir && ! (":$PATH:" == *":$dir:"*) ]]; then
+      export PATH="$dir:$PATH"
+    fi
+  done
+}
+
+add_to_path_if_exist $HOME/dotfiles/bin /usr/local/bin /usr/local/share/npm/bin /usr/local/heroku/bin
+unset add_to_path_if_exist
+
 set +o histexpand
 source ~/dotfiles/bash/git-completion.sh
 source ~/dotfiles/bash/prompt.sh
-
-if [[ -e /usr/local/share/npm/bin ]]; then
-  PATH="/usr/local/share/npm/bin:$PATH"
-fi
-PATH="$HOME/dotfiles/bin:/usr/local/bin:$PATH"
 
 which rbenv >/dev/null && eval "$(rbenv init -)"
 
