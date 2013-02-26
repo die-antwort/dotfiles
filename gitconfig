@@ -26,22 +26,24 @@
   renames = true
   
 [format]
-	pretty = %C(yellow)%h%C(magenta bold)%d%Creset %s %C(blue)<%an> %C(green)(%ar)%Creset
+  pretty = %C(yellow)%h%C(magenta bold)%d%Creset %s %C(blue)<%an> %C(green)(%ar)%Creset
 
 [url "ssh://git@git.die-antwort.eu/var/git/"]
   insteadOf = da:
 [merge]
-	conflictstyle = diff3
+  conflictstyle = diff3
+
 [rerere]
-	enabled = true
+  enabled = true
+
 [push]
-	default = tracking
+  default = tracking
 
 [difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
   prompt = false
 
 [mergetool "Kaleidoscope"]
   cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" \"$REMOTE\"
-	prompt = false
-	keepBackup = true
+  prompt = false
+  keepBackup = true
