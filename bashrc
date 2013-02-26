@@ -93,6 +93,7 @@ alias sudo="sudo "
 
 alias ..="cd .."
 alias ...="cd ../.."
+alias ....="cd ../../.."
 alias ll="ls -al"
 alias be="bundle exec"
 alias ttr="touch tmp/restart.txt"
