@@ -64,8 +64,12 @@ function add_to_path_if_exist () {
   done
 }
 
-add_to_path_if_exist $HOME/dotfiles/bin /usr/local/bin /usr/local/share/npm/bin /usr/local/heroku/bin
+add_to_path_if_exist /usr/local/share/npm/bin /usr/local/heroku/bin
 unset add_to_path_if_exist
+
+# Make sure these two are always at the beginning of PATH (on Mac OS X, /usr/local/bin may 
+# already be part of $PATH, but shadowed by /usr/bin).
+PATH="$HOME/dotfiles/bin:/usr/local/bin:$PATH"
 
 set +o histexpand
 source ~/dotfiles/bash/git-completion.sh
