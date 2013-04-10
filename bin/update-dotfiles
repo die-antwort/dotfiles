@@ -2,5 +2,4 @@
 
 cd ~/dotfiles || exit 1
 
-git pull -r
-./install
+git pull -r && ./install
