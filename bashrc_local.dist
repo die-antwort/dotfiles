@@ -11,3 +11,6 @@ export GIT_AUTHOR_NAME=""
 # Change this only if you really want to use different GIT_COMMITTER info:
 export GIT_COMMITTER_EMAIL=$GIT_AUTHOR_EMAIL
 export GIT_COMMITTER_NAME=$GIT_AUTHOR_NAME
+
+# Uncomment the following line if you want to use a multiline bash prompt
+#USE_MULTILINE_PROMPT=1 
