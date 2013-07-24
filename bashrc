@@ -55,7 +55,7 @@ if [[ -n "$PS1" ]]; then
     local cur=${COMP_WORDS[COMP_CWORD]}
     local save_ifs=$IFS
     IFS=$'\n'
-    local projects=$(ls ~/Projekte | sed -e 's/^[pP]//')
+    local projects=$(ls ~/Projekte | sed -e 's/^[pP]//' -e 's/&/\\&/')
     COMPREPLY=( $( compgen -W '$projects' -- $cur ) )
     IFS=$save_ifs
     return 0
