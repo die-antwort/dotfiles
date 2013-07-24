@@ -40,6 +40,9 @@ if [[ -n "$PS1" ]]; then
   LightCyan='\033[1;36m'
   White='\033[1;37m'
 
+  # system specific settings can be set in .bashrc_local
+  [ -e ~/.bashrc_local ] && source ~/.bashrc_local
+
   function p () {
     if [[ -d "$HOME/Projekte/P$*" ]]; then
       cd "$HOME/Projekte/P$*"
@@ -120,5 +123,3 @@ if [[ -n "$PS1" ]]; then
 
 fi
   
-# system specific settings can be set in .bashrc_local
-[ -e ~/.bashrc_local ] && source ~/.bashrc_local
