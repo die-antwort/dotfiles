@@ -1,3 +1,6 @@
+# system specific settings can be set in .bashrc_local
+[ -e ~/.bashrc_local ] && source ~/.bashrc_local
+
 function add_to_path_if_exist () {
   # loop over arguments in reverse order to make sure $PATH contains the arguments in the 
   # same order as given to the function
@@ -39,9 +42,6 @@ if [[ -n "$PS1" ]]; then
   LightMagenta='\033[1;35m'
   LightCyan='\033[1;36m'
   White='\033[1;37m'
-
-  # system specific settings can be set in .bashrc_local
-  [ -e ~/.bashrc_local ] && source ~/.bashrc_local
 
   function p () {
     if [[ -d "$HOME/Projekte/P$*" ]]; then
