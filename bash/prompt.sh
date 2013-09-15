@@ -1,4 +1,5 @@
 function _set_project_and_dir_in_project () {
+  local use_multiline_prompt=$1
   local dir=$(pwd)
   local basename=$(basename "$dir")
   if [[ $dir == ~/Projekte/* ]]; then
@@ -15,11 +16,15 @@ function _set_project_and_dir_in_project () {
     fi
   else
     Project=""
-    DirInProject=$basename
+    if [[ -z "$1" ]]; then
+      DirInProject=${dir/#$HOME/\~}
+    else
+      DirInProject=$basename
+    fi
   fi
 }
 
-PROMPT_COMMAND="_set_project_and_dir_in_project; $PROMPT_COMMAND"
+PROMPT_COMMAND="_set_project_and_dir_in_project $USE_MULTILINE_PROMPT; $PROMPT_COMMAND"
 
 # We use the prompt to also set the terminal window's title. Mac OS Terminal
 # shows pwd in titlebar, but this is meaningless for ssh connections. So, if 
