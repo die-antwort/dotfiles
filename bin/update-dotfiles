@@ -2,4 +2,13 @@
 
 cd ~/dotfiles || exit 1
 
+if [[ $(git status -s) ]]; then
+  echo "Uncommitted changes detected. I will try to stash them and reapply the stash after the update."
+  git stash -u
+  STASHED=1
+fi
 git pull -r && ./install
+if [[ $STASHED ]]; then
+  echo "Reapplying stashed changes ..."
+  git stash pop
+fi
