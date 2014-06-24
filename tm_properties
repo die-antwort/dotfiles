@@ -9,3 +9,7 @@ TM_PHP_OPEN_TAG = ""
 
 windowTitleProject = '${projectDirectory:+ — ${projectDirectory/^.*Projekte\/((P\d{5}[^\/]*|(DA\/[^\/]*))).*/$1/}}'
 windowTitle = '${TM_FILEPATH:?${TM_FILEPATH/${projectDirectory}.//}:$TM_DISPLAYNAME}$windowTitleProject$windowTitleSCM'
+
+[ *.tsv ]
+tabSize = 8
+softTabs = false
