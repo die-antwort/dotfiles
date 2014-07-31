@@ -30,7 +30,7 @@ function _rbenv_version_for_prompt () {
   else
     local local_version
     local_version=$(rbenv local 2>/dev/null)
-    if [[ $? == 0 ]]; then
+    if [[ $? == 0 && $local_version != $_GLOBAL_RBENV_VERSION ]]; then
       echo " (Ruby $local_version)"
     fi
   fi
@@ -56,6 +56,7 @@ else
 fi
 
 if declare -F rbenv &>/dev/null; then
+  _GLOBAL_RBENV_VERSION=$(rbenv global)
   RBENV_PROMPT="\$(_rbenv_version_for_prompt)"
 fi
 
