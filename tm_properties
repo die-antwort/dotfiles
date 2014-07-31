@@ -2,7 +2,7 @@ tabSize = 2
 softTabs = true
 
 exclude = "{$exclude,*.scssc}"
-excludeInFileChooser = "{$exclude,*.gif,*.png,*.jpg,tmp}"
+excludeInFileChooser = "{$exclude,*.{gif,png,jpg,eot,ttf,woff,swf},tmp}"
 excludeInFolderSearch = "{$exclude,tmp,log,*.{eot,otf,ttf,woff,swf}}"
 
 TM_PHP_OPEN_TAG = ""
