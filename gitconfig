@@ -15,6 +15,7 @@
   rb = rebase
   rbc = rebase --continue
   rmd = !git ls-files -z --deleted | xargs -0 git rm
+  ss = submodule summary
   st = status
   
 [color]
