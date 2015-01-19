@@ -122,7 +122,6 @@ if [[ -n "$PS1" ]]; then
   alias da5="da_ssh da5.die-antwort.eu"
   alias buero="da_ssh buero.die-antwort.eu"
   alias dabuero="da_ssh buero.die-antwort.eu"
-  alias xxx="da_ssh xxx.die-antwort.eu"
   alias reload="source ~/.bashrc"
   alias cdtmbundles="cd ~/Library/Application\ Support/Avian/Bundles"
 
