@@ -4,7 +4,7 @@ softTabs = true
 include = "{$include,.env,.gitattributes,.gitignore,.gitkeep,.ruby-version}"
 exclude = "{$exclude,*.scssc}"
 excludeInFileChooser = "{$exclude,*.{gif,png,jpg,eot,ttf,woff,swf},tmp}"
-excludeInFolderSearch = "{$exclude,tmp,log,*.{eot,otf,ttf,woff,swf}}"
+excludeInFolderSearch = "{$exclude,tmp,log,*.{doc,docx,eot,gif,jpg,JPG,otf,pdf,swf,ttf,woff,xls,xlsx}}"
 
 TM_PHP_OPEN_TAG = ""
 
