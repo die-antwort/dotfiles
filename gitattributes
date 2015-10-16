@@ -1,0 +1,4 @@
+*.php diff=php
+*.html diff=html
+*.rb diff=ruby
+

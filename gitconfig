@@ -22,6 +22,7 @@
   ui = auto
 
 [core]  
+  attributesFile = ~/dotfiles/gitattributes
   excludesfile = ~/dotfiles/gitignore
   
 [diff]
