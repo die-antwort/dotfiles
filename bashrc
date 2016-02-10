@@ -15,9 +15,9 @@ function add_to_path_if_exist () {
 add_to_path_if_exist /usr/local/share/npm/bin /usr/local/heroku/bin
 unset add_to_path_if_exist
 
-# Make sure these two are always at the beginning of PATH (on Mac OS X, /usr/local/bin may 
+# Make sure these are always at the beginning of PATH (on Mac OS X, /usr/local/bin may 
 # already be part of $PATH, but shadowed by /usr/bin).
-PATH="$HOME/dotfiles/bin:/usr/local/bin:$PATH"
+PATH="$HOME/dotfiles/bin:/usr/local/sbin:/usr/local/bin:$PATH"
 
 which rbenv >/dev/null && eval "$(rbenv init -)"
 
