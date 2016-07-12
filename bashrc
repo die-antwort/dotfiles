@@ -77,6 +77,7 @@ if [[ -n "$PS1" ]]; then
   }
 
   set +o histexpand
+  shopt -s histappend # append to the history file (instead of overwriting it) when closing the shell
   source ~/dotfiles/bash/git-completion.sh
   source ~/dotfiles/bash/prompt.sh
 
