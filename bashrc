@@ -110,13 +110,6 @@ if [[ -n "$PS1" ]]; then
   alias fgrep='fgrep --color=auto'
   alias egrep='egrep --color=auto'
 
-  # Fix "perl: warning: Setting locale failed." errors when ssh'ing into some servers.
-  # (Seems that Mac OS sets LC_CTYPE to "UTF-8" when the system language is english,
-  # and Ubuntu doesn't recognize this as a valid locale.)
-  if [[ $LC_CTYPE == "UTF-8" ]]; then
-    export LC_CTYPE="en_US.UTF-8"
-  fi
-
   # less
   export LESS=-R # enable ansi colors
   [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)" # use lesspipe if available
