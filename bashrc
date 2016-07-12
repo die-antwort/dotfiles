@@ -90,6 +90,11 @@ if [[ -n "$PS1" ]]; then
   else
     alias ls="ls --color=auto"
   fi
+  
+  # enable colored output from grep
+  alias grep='grep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
 
   # Fix "perl: warning: Setting locale failed." errors when ssh'ing into some servers.
   # (Seems that Mac OS sets LC_CTYPE to "UTF-8" when the system language is english,
