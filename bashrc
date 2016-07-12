@@ -76,8 +76,11 @@ if [[ -n "$PS1" ]]; then
     ssh $args $DA_USERNAME@$*
   }
 
+  # shell history control
+  export HISTCONTROL="ignoredups"
   set +o histexpand
   shopt -s histappend # append to the history file (instead of overwriting it) when closing the shell
+
   source ~/dotfiles/bash/git-completion.sh
   source ~/dotfiles/bash/prompt.sh
 
@@ -98,7 +101,6 @@ if [[ -n "$PS1" ]]; then
   # enable ansi colors in less
   export LESS=-R
 
-  export HISTCONTROL="ignoredups"
 
   export EDITOR=vim
   which mate >/dev/null && export EDITOR="mate -w"
