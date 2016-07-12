@@ -93,7 +93,8 @@ if [[ -n "$PS1" ]]; then
     fi
   fi
   
-  source ~/dotfiles/bash/prompt.sh
+  # Customize prompt
+  . ~/dotfiles/bash/prompt.sh
 
   # enable colored output from ls on Mac OS (CLICOLOR) and Linux (alias)
   if [[ $(uname) == "Darwin" ]]; then
@@ -113,7 +114,8 @@ if [[ -n "$PS1" ]]; then
   # less
   export LESS=-R # enable ansi colors
   [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)" # use lesspipe if available
-
+  
+  # Use vim or TextMate (if available) as default editor
   export EDITOR=vim
   which mate >/dev/null && export EDITOR="mate -w"
 
