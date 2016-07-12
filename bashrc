@@ -98,9 +98,9 @@ if [[ -n "$PS1" ]]; then
     export LC_CTYPE="en_US.UTF-8"
   fi
 
-  # enable ansi colors in less
-  export LESS=-R
-
+  # less
+  export LESS=-R # enable ansi colors
+  [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)" # use lesspipe if available
 
   export EDITOR=vim
   which mate >/dev/null && export EDITOR="mate -w"
