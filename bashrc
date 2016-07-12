@@ -79,7 +79,7 @@ if [[ -n "$PS1" ]]; then
   # Always use english locale: When ssh'ing into a server the local value of `$LANG` often will be used
   # on the server, too - this is confusing (and may lead to warnings like "Setting locale failed." if 
   # this locale is not installed on the server).
-  export LANG=en_US.utf8
+  export LANG=en_US.UTF-8
    
   # shell history control 
   export HISTCONTROL="ignoredups"
