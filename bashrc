@@ -75,8 +75,13 @@ if [[ -n "$PS1" ]]; then
     fi
     ssh $args $DA_USERNAME@$*
   }
-
-  # shell history control
+  
+  # Always use english locale: When ssh'ing into a server the local value of `$LANG` often will be used
+  # on the server, too - this is confusing (and may lead to warnings like "Setting locale failed." if 
+  # this locale is not installed on the server).
+  export LANG=en_US.utf8
+   
+  # shell history control 
   export HISTCONTROL="ignoredups"
   set +o histexpand
   shopt -s histappend # append to the history file (instead of overwriting it) when closing the shell
