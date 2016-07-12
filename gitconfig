@@ -18,17 +18,17 @@
   rmd = !git ls-files -z --deleted | xargs -0 git rm
   ss = submodule summary
   st = status
-  
+
 [color]
   ui = auto
 
-[core]  
+[core]
   attributesFile = ~/dotfiles/gitattributes
   excludesfile = ~/dotfiles/gitignore
-  
+
 [diff]
   renames = true
-  
+
 [format]
   pretty = %C(yellow)%h%C(magenta bold)%d%Creset %s %C(blue)<%an> %C(green)(%ar)%Creset
 

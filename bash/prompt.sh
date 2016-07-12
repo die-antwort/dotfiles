@@ -39,8 +39,8 @@ function _rbenv_version_for_prompt () {
 PROMPT_COMMAND="_set_project_and_dir_in_project $USE_MULTILINE_PROMPT; $PROMPT_COMMAND"
 
 # We use the prompt to also set the terminal window's title. Mac OS Terminal
-# shows pwd in titlebar, but this is meaningless for ssh connections. So, if 
-# we are on a ssh connection, we show user@host instead. But we also make 
+# shows pwd in titlebar, but this is meaningless for ssh connections. So, if
+# we are on a ssh connection, we show user@host instead. But we also make
 # sure to reset this, if we are local again.
 
 if [[ -z "$SSH_CONNECTION" ]]; then

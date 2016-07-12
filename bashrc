@@ -2,9 +2,9 @@
 [ -e ~/.bashrc_local ] && source ~/.bashrc_local
 
 function add_to_path_if_exist () {
-  # loop over arguments in reverse order to make sure $PATH contains the arguments in the 
+  # loop over arguments in reverse order to make sure $PATH contains the arguments in the
   # same order as given to the function
-  for ((i=$#; i>0; i--)); do 
+  for ((i=$#; i>0; i--)); do
     local dir=${!i}
     if [[ -e $dir && ! (":$PATH:" == *":$dir:"*) ]]; then
       export PATH="$dir:$PATH"
@@ -15,7 +15,7 @@ function add_to_path_if_exist () {
 add_to_path_if_exist /usr/local/share/npm/bin /usr/local/heroku/bin
 unset add_to_path_if_exist
 
-# Make sure these are always at the beginning of PATH (on Mac OS X, /usr/local/bin may 
+# Make sure these are always at the beginning of PATH (on Mac OS X, /usr/local/bin may
 # already be part of $PATH, but shadowed by /usr/bin).
 PATH="$HOME/dotfiles/bin:/usr/local/sbin:/usr/local/bin:$PATH"
 
@@ -86,16 +86,16 @@ if [[ -n "$PS1" ]]; then
   else
     alias ls="ls --color=auto"
   fi
-  
+
   # Fix "perl: warning: Setting locale failed." errors when ssh'ing into some servers.
-  # (Seems that Mac OS sets LC_CTYPE to "UTF-8" when the system language is english, 
+  # (Seems that Mac OS sets LC_CTYPE to "UTF-8" when the system language is english,
   # and Ubuntu doesn't recognize this as a valid locale.)
   if [[ $LC_CTYPE == "UTF-8" ]]; then
     export LC_CTYPE="en_US.UTF-8"
   fi
-    
+
   # enable ansi colors in less
-  export LESS=-R 
+  export LESS=-R
 
   export HISTCONTROL="ignoredups"
 
@@ -130,4 +130,4 @@ if [[ -n "$PS1" ]]; then
   fi
 
 fi
-  
+
