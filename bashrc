@@ -81,7 +81,18 @@ if [[ -n "$PS1" ]]; then
   set +o histexpand
   shopt -s histappend # append to the history file (instead of overwriting it) when closing the shell
 
-  source ~/dotfiles/bash/git-completion.sh
+  # Bash completion: If system wide completion is available (eg. from Ubuntu package `bash-completion`),
+  # use that; otherwise fall back to our bundled completion script for `git` at least.
+  if ! shopt -oq posix; then
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+      . /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+      . /etc/bash_completion
+    else
+      . ~/dotfiles/bash/git-completion.sh
+    fi
+  fi
+  
   source ~/dotfiles/bash/prompt.sh
 
   # enable colored output from ls on Mac OS (CLICOLOR) and Linux (alias)
