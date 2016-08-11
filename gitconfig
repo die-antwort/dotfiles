@@ -6,6 +6,7 @@
   diffc = diff --cached
   diffw = diff --word-diff=color
   diffk = difftool -y -t Kaleidoscope
+  fixup = commit --amend -C HEAD
   logd = log --format=medium -p
   logl = log --format=medium --decorate
   logg = log --graph
