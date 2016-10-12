@@ -75,13 +75,13 @@ if [[ -n "$PS1" ]]; then
     fi
     ssh $args $DA_USERNAME@$*
   }
-  
+
   # Always use english locale: When ssh'ing into a server the local value of `$LANG` often will be used
-  # on the server, too - this is confusing (and may lead to warnings like "Setting locale failed." if 
+  # on the server, too - this is confusing (and may lead to warnings like "Setting locale failed." if
   # this locale is not installed on the server).
   export LANG=en_US.UTF-8
-   
-  # shell history control 
+
+  # shell history control
   export HISTCONTROL="ignoredups"
   set +o histexpand
   shopt -s histappend # append to the history file (instead of overwriting it) when closing the shell
@@ -97,7 +97,7 @@ if [[ -n "$PS1" ]]; then
       . ~/dotfiles/bash/git-completion.sh
     fi
   fi
-  
+
   # Customize prompt
   . ~/dotfiles/bash/prompt.sh
 
@@ -110,7 +110,7 @@ if [[ -n "$PS1" ]]; then
   if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
   fi
-  
+
   # enable colored output from grep
   alias grep='grep --color=auto'
   alias fgrep='fgrep --color=auto'
@@ -119,7 +119,7 @@ if [[ -n "$PS1" ]]; then
   # less
   export LESS=-R # enable ansi colors
   [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)" # use lesspipe if available
-  
+
   # Use vim or TextMate (if available) as default editor
   export EDITOR=vim
   which mate >/dev/null && export EDITOR="mate -w"
