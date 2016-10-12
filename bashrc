@@ -145,7 +145,7 @@ if [[ -n "$PS1" ]]; then
   alias buero="da_ssh buero.die-antwort.eu"
   alias dabuero="da_ssh buero.die-antwort.eu"
   alias reload="source ~/.bashrc"
-  alias cdtmbundles="cd ~/Library/Application\ Support/Avian/Bundles"
+  alias cdtmbundles="cd ~/Library/Application\ Support/TextMate/Bundles"
 
   if [[ -n "$RMATE_REMOTE_PORT" && -n "$SSH_CONNECTION" ]]; then
     export RMATE_PORT=$RMATE_REMOTE_PORT
