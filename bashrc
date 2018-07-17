@@ -135,6 +135,8 @@ if [[ -n "$PS1" ]]; then
   alias brails="bin/rails"
   alias brake="bin/rake"
   alias brspec="bin/rspec"
+  alias brc="bin/rubocop"
+  alias brubocop="bin/rubocop"
   alias ttr="touch tmp/restart.txt"
   which apachectl >/dev/null && alias agr="apachectl graceful"
   which apache2ctl >/dev/null && alias agr="apache2ctl graceful"
