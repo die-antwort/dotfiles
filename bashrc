@@ -138,6 +138,7 @@ if [[ -n "$PS1" ]]; then
   alias brc="bin/rubocop"
   alias brubocop="bin/rubocop"
   alias gitsscp="git ss | pbcopy && git ss | cat && echo '(Output above has been copied into clipboard)'"
+  alias gt="gittower ."
   alias ttr="touch tmp/restart.txt"
   which apachectl >/dev/null && alias agr="apachectl graceful"
   which apache2ctl >/dev/null && alias agr="apache2ctl graceful"
@@ -154,4 +155,3 @@ if [[ -n "$PS1" ]]; then
   fi
 
 fi
-
