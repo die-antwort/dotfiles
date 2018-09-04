@@ -64,16 +64,11 @@ if [[ -n "$PS1" ]]; then
   complete -F _p p
 
   function da_ssh () {
-    local args
     if [ -z "$DA_USERNAME" ]; then
       echo "ERROR: Environment variable DA_USERNAME not set (use ~/.bashrc_local for setting it)."
       return
     fi
-    if [[ "$RMATE_REMOTE_PORT" != "" ]]; then
-      # set up port forwarding for rmate (TextMate 2)
-      args="-R $RMATE_REMOTE_PORT:localhost:52698 -o SendEnv=RMATE_REMOTE_PORT"
-    fi
-    ssh $args -A $DA_USERNAME@$*
+    ssh -A $DA_USERNAME@$*
   }
 
   # Always use english locale: When ssh'ing into a server the local value of `$LANG` often will be used
