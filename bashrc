@@ -141,6 +141,7 @@ if [[ -n "$PS1" ]]; then
   alias da6="da_ssh da6.die-antwort.eu"
   alias buero="da_ssh buero.die-antwort.eu"
   alias dabuero="da_ssh buero.die-antwort.eu"
+  alias tunnel="echo 'Setting up tunnel for localhost:3000 at https://tunnel.die-antwort.eu' && da_ssh da6.die-antwort.eu -R3333:localhost:3000 -N"
   alias reload="source ~/.bashrc"
   alias cdtmbundles="cd ~/Library/Application\ Support/TextMate/Bundles"
 
