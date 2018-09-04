@@ -1,7 +1,7 @@
 tabSize = 2
 softTabs = true
 
-include = "{$include,.ctags,.dashmate.yml,.env,.eslint*,.gitattributes,.gitignore,.gitkeep,.gitmodules,.htaccess*,.htpasswd,.rubocop*.yml,.ruby-version,.rspec}"
+include = "{$include,.ctags,.dashmate.yml,.env,.eslint*,.gitattributes,.gitignore,.gitkeep,.gitmodules,.htaccess*,.htpasswd,.keep,.rubocop*.yml,.ruby-version,.rspec}"
 exclude = "{$exclude,*.scssc}"
 excludeInFileChooser = "{$exclude,*.{gif,png,jpg,eot,ttf,woff,swf},tmp}"
 excludeInFolderSearch = "{$exclude,tmp,log,*.{doc,docx,eot,gif,jpg,JPG,otf,pdf,swf,ttf,woff,xls,xlsx}}"
