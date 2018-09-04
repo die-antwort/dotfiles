@@ -1,7 +1,7 @@
 tabSize = 2
 softTabs = true
 
-include = "{$include,.ctags,.dashmate.yml,.env,.eslint*,.gitattributes,.gitignore,.gitkeep,.gitmodules,.htaccess*,.htpasswd,.keep,.rubocop*.yml,.ruby-version,.rspec}"
+include = "{$include,.ctags,.dashmate.yml,.env,.eslint*,.gitattributes,.gitignore,.gitkeep,.gitmodules,.htaccess*,.htpasswd,.keep,.rubocop*.yml,.ruby-version,.rspec,.yardopts}"
 exclude = "{$exclude,*.scssc}"
 excludeInFileChooser = "{$exclude,*.{gif,png,jpg,eot,ttf,woff,swf},tmp}"
 excludeInFolderSearch = "{$exclude,tmp,log,*.{doc,docx,eot,gif,jpg,JPG,otf,pdf,swf,ttf,woff,xls,xlsx}}"
@@ -14,3 +14,6 @@ windowTitle = '${TM_FILEPATH:?${TM_FILEPATH/${projectDirectory}.//}:$TM_DISPLAYN
 [ *.tsv ]
 tabSize = 8
 softTabs = false
+
+[ *.rs ]
+tabSize = 4
