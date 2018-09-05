@@ -138,6 +138,7 @@ if [[ -n "$PS1" ]]; then
   which apachectl >/dev/null && alias agr="apachectl graceful"
   which apache2ctl >/dev/null && alias agr="apache2ctl graceful"
   alias r="ruby"
+  alias da5="da_ssh da5.die-antwort.eu"
   alias da6="da_ssh da6.die-antwort.eu"
   alias buero="da_ssh buero.die-antwort.eu"
   alias dabuero="da_ssh buero.die-antwort.eu"
