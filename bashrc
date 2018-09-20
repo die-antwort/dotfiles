@@ -12,7 +12,7 @@ function add_to_path_if_exist () {
   done
 }
 
-add_to_path_if_exist /usr/local/share/npm/bin /usr/local/heroku/bin
+add_to_path_if_exist /usr/local/share/npm/bin /usr/local/heroku/bin $HOME/.rbenv/bin
 unset add_to_path_if_exist
 
 # Make sure these are always at the beginning of PATH (on Mac OS X, /usr/local/bin may
