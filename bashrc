@@ -115,9 +115,9 @@ if [[ -n "$PS1" ]]; then
   export LESS=-R # enable ansi colors
   [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)" # use lesspipe if available
 
-  # Use vim or TextMate (if available) as default editor
+  # Use vim or VSCode (if available) as default editor
   export EDITOR=vim
-  which mate >/dev/null && export EDITOR="mate -w"
+  which code >/dev/null && export EDITOR="code -w"
 
   # make it possible to use aliases with sudo (see https://wiki.archlinux.org/index.php/Sudo#Passing_aliases)
   alias sudo="sudo "
