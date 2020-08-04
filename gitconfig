@@ -13,6 +13,7 @@
   logb = log --graph --branches
   loga = log --graph --all
   pullr = pull --rebase
+  pulls = pull --recurse-submodules
   pushs = push --recurse-submodules=on-demand
   rb = rebase
   rbc = rebase --continue
