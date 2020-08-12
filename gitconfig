@@ -12,7 +12,6 @@
   logg = log --graph
   logb = log --graph --branches
   loga = log --graph --all
-  pullr = pull --rebase
   pulls = pull --recurse-submodules
   pushs = push --recurse-submodules=on-demand
   rb = rebase
@@ -41,6 +40,9 @@
 
 [rerere]
   enabled = true
+
+[pull]
+  rebase = true
 
 [push]
   default = tracking
