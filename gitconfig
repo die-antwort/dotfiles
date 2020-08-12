@@ -12,8 +12,6 @@
   logg = log --graph
   logb = log --graph --branches
   loga = log --graph --all
-  pulls = pull --recurse-submodules
-  pushs = push --recurse-submodules=on-demand
   rb = rebase
   rbc = rebase --continue
   rmd = !git ls-files -z --deleted | xargs -0 git rm
@@ -46,6 +44,9 @@
 
 [push]
   default = tracking
+
+[submodule]
+  recurse = true
 
 [difftool "Kaleidoscope"]
   cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
