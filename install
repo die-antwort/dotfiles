@@ -11,10 +11,10 @@ echo -e "\n=== Creating new symlinks in ~"
 for i in $FILES; do
   dotfile=".$i"
   if [ -e $dotfile ]; then
-    echo "ERROR: '$dotfile' already exists. Remove it manually, then run install again."
-  else
-    ln -vs dotfiles/$i $dotfile
+    echo "WARNING: '$dotfile' already exists. Renaming to '$dotfile.dotfiles-orig'."
+    mv $dotfile $dotfile.dotfiles-orig
   fi
+  ln -vs dotfiles/$i $dotfile
 done
 
 
