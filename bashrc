@@ -75,6 +75,7 @@ if [[ -n "$PS1" ]]; then
   # on the server, too - this is confusing (and may lead to warnings like "Setting locale failed." if
   # this locale is not installed on the server).
   export LANG=en_US.UTF-8
+  export LC_COLLATE=C
 
   # shell history control
   export HISTCONTROL="ignoredups"
